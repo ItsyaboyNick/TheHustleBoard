@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform your Pinterest into a profitable side hustle with The Hustle Board. Expert affiliate marketing strategies for finance and entrepreneurship niches.">
+    <meta name="keywords" content="Pinterest marketing, affiliate marketing, side hustle, passive income, finance niche">
+    <title>The Hustle Board - Turn Your Pinterest Into Passive Income</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #000;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            position: relative;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #000;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 20px;
+            color: #64748b;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #000;
+            color: #fff;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-primary:hover {
+            background: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hero-visual {
+            position: relative;
+            height: 500px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 80px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 120px 0;
+            background: #fff;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 80px;
+        }
+        
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #f8fafc;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 120px 0;
+            background: #f8fafc;
+        }
+        
+        .benefits-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .benefits-text h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 32px;
+            letter-spacing: -1px;
+        }
+        
+        .benefit-list {
+            list-style: none;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #334155;
+        }
+        
+        .benefit-item::before {
+            content: '✓';
+            background: #000;
+            color: #fff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .benefits-visual {
+            background: #fff;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .revenue-chart {
+            font-size: 48px;
+            color: #22c55e;
+            margin-bottom: 20px;
+        }
+        
+        .chart-label {
+            font-size: 16px;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+        
+        .chart-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+        }
+        
+        /* Testimonial Section */
+        .testimonial {
+            padding: 120px 0;
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .testimonial-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-quote {
+            font-size: 24px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .author-info h4 {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .author-info p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 0;
+            background: #fff;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: #000;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-secondary:hover {
+            border-color: #000;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #f8fafc;
+            padding: 60px 0 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .footer-section a:hover {
+            color: #000;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .footer-bottom p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        /* Focus styles for keyboard navigation */
+        *:focus {
+            outline: 3px solid #2563eb;
+            outline-offset: 2px;
+        }
+        
+        /* Skip to main content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            font-weight: 600;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .hero {
+                background: #fff;
+                color: #000;
+            }
+            
+            .cta-primary {
+                background: #000;
+                color: #fff;
+                border: 2px solid #000;
+            }
+        }
+        
+        /* Reduced motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            
+            .floating {
+                animation: none;
+            }
+        }
+        
+        /* Screen reader only text */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero-text h1 {
+                font-size: 40px;
+            }
+            
+            .hero-visual {
+                height: 300px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                margin-top: 60px;
+            }
+            
+            .benefits-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content for screen readers -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
+            <div class="logo">The Hustle Board</div>
+            <ul class="nav-links">
+                <li><a href="#home" aria-label="Go to home section">Home</a></li>
+                <li><a href="#features" aria-label="View our solutions">Solutions</a></li>
+                <li><a href="#benefits" aria-label="See results and benefits">Results</a></li>
+                <li><a href="#contact" aria-label="Contact information">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main" role="main">
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 id="hero-title">Scale Your Pinterest Marketing to $10K+ Monthly</h1>
+                        <p class="subtitle">Professional Pinterest affiliate marketing strategies for side hustle and finance niches. Join 2,000+ marketers generating consistent passive income.</p>
+                        <a href="#cta" class="cta-primary" aria-describedby="cta-description">
+                            <span>Get Started</span>
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <span id="cta-description" class="sr-only">Start your Pinterest marketing journey and learn professional strategies</span>
+                    </div>
+                    
+                    <div class="hero-visual" role="img" aria-label="Pinterest marketing analytics dashboard illustration">
+                        <div style="font-size: 80px; color: #e11d48;" aria-hidden="true">📊</div>
+                    </div>
+                </div>
+                
+                <div class="stats-grid" role="region" aria-labelledby="stats-title">
+                    <h2 id="stats-title" class="sr-only">Pinterest Marketing Statistics</h2>
+                    <div class="stat-item">
+                        <div class="stat-number" aria-label="400 million">400M+</div>
+                        <div class="stat-label">Monthly Pinterest Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" aria-label="83 percent">83%</div>
+                        <div class="stat-label">Use Pinterest for Purchases</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" aria-label="5000 dollars">$5,000</div>
+                        <div class="stat-label">Average Monthly Earnings</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features" aria-labelledby="features-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="features-title" class="section-title">Enterprise-Grade Pinterest Marketing</h2>
+                    <p class="section-subtitle">Professional tools and strategies designed for serious marketers who want to build sustainable revenue streams.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <article class="feature-card fade-in">
+                        <div class="feature-icon" aria-hidden="true">🎯</div>
+                        <h3>Advanced Targeting Systems</h3>
+                        <p>Proprietary audience research methods to identify high-intent users in side hustle and finance niches. Target users ready to buy, not just browse.</p>
+                    </article>
+                    
+                    <article class="feature-card fade-in">
+                        <div class="feature-icon" aria-hidden="true">⚡</div>
+                        <h3>Conversion-Optimized Content</h3>
+                        <p>Proven pin templates and copywriting frameworks that convert browsers into buyers. Tested across millions of impressions.</p>
+                    </article>
+                    
+                    <article class="feature-card fade-in">
+                        <div class="feature-icon" aria-hidden="true">📈</div>
+                        <h3>Revenue Analytics Dashboard</h3>
+                        <p>Track every click, conversion, and commission. Real-time insights to optimize your campaigns and maximize ROI across all affiliate programs.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits" id="benefits" aria-labelledby="benefits-title">
+            <div class="container">
+                <div class="benefits-content">
+                    <div class="benefits-text">
+                        <h2 id="benefits-title">Your Path to Pinterest Profitability</h2>
+                        <ul class="benefit-list" role="list">
+                            <li class="benefit-item" role="listitem">Generate 50,000+ monthly Pinterest impressions</li>
+                            <li class="benefit-item" role="listitem">Build automated affiliate funnels that work 24/7</li>
+                            <li class="benefit-item" role="listitem">Access exclusive high-paying finance affiliate programs</li>
+                            <li class="benefit-item" role="listitem">Master advanced Pinterest SEO techniques</li>
+                            <li class="benefit-item" role="listitem">Scale to $10,000+ monthly recurring revenue</li>
+                            <li class="benefit-item" role="listitem">Get proven side hustle promotion strategies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="benefits-visual" role="img" aria-label="Revenue growth chart showing 347 percent average monthly growth">
+                        <div class="revenue-chart" aria-hidden="true">📊</div>
+                        <div class="chart-label">Average Monthly Growth</div>
+                        <div class="chart-value">+347%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="testimonial" role="region" aria-labelledby="testimonial-title">
+            <div class="container">
+                <div class="testimonial-content">
+                    <h2 id="testimonial-title" class="sr-only">Customer Testimonial</h2>
+                    <blockquote class="testimonial-quote">
+                        "The Hustle Board transformed my Pinterest from a hobby into a $15K/month business. The strategies are incredibly sophisticated yet easy to implement."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" role="img" aria-label="Profile image of Sarah Mitchell">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>Finance Blogger & Affiliate Marketer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Ready to Transform Your Pinterest Strategy?</h2>
+                    <p>Join the elite community of Pinterest marketers scaling their affiliate income with professional-grade strategies.</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:thehustleboard.pinterest@gmail.com" class="cta-primary" aria-describedby="primary-cta-description">
+                            <span>Start Your Journey</span>
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <span id="primary-cta-description" class="sr-only">Send an email to start your Pinterest marketing journey</span>
+                        <a href="#features" class="cta-secondary" aria-label="View our case studies and success stories">
+                            <span>View Case Studies</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Hustle Board</h3>
+                    <p>Transform your Pinterest into a profitable side hustle. Expert strategies for affiliate marketing in finance and entrepreneurship niches.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <p><a href="#">Pinterest Strategy Audit</a><br>
+                    <a href="#">Affiliate Program Access</a><br>
+                    <a href="#">Content Creation Tools</a><br>
+                    <a href="#">Analytics Dashboard</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p><a href="#">Case Studies</a><br>
+                    <a href="#">Pinterest Best Practices</a><br>
+                    <a href="#">Affiliate Marketing Guide</a><br>
+                    <a href="#">Revenue Calculator</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: thehustleboard.pinterest@gmail.com<br>
+                    Pinterest: @thehustleboard<br>
+                    Ready to scale your Pinterest income?</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Hustle Board. All rights reserved. Professional Pinterest marketing solutions.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 1px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
